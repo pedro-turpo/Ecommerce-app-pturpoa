@@ -5,7 +5,7 @@ import ProductDetail from './pages/ProductDetail'
 import Purchases from './pages/Purchases'
 import Header from './components/layout/Header'
 import ProtectedRoutes from './components/auth/ProtectedRoutes'
-import Cart from './components/cart/cart'
+import Cart from './components/cart/Cart'
 
 function App() {
 
