@@ -31,10 +31,10 @@ const Cart = () => {
         <section className={`fixed top-0 bg-white h-screen ${isShowCart && token  ? "right-0" : "-right-full"} w-[300px] sm:w-[350px] transition-all duration-300 p-2 shadow-2xl shadow-black/30 grid grid-rows-[auto_1fr_auto] mt-[70px]`}>
 
             <button onClick={handleClickChangeShowCart} className="absolute top-3 right-3 text-xl text-red-500"><i className='bx bxs-x-square'></i></button>
-            <h3 className="font-bold text-xl">Shopping Cart</h3>
+            <h3 className="font-bold text-xl text-gray-500">Shopping Cart</h3>
 
             {/* Productos del carrito */}
-            <section className="grid gap-4 content-start py-4 overflow-y-auto">
+            <section className="grid gap-10 content-start py-8 overflow-y-auto">
                 {
                     products.map((cartProduct) => <CartProduct key={cartProduct.id} cartProduct={ cartProduct } />)
                 }

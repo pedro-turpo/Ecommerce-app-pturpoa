@@ -20,17 +20,17 @@ const Login = () => {
 
 
     return (
-        <section className="bg-gray-100 grid place-content-center px-2 border mt-[70px] min-h-screen">
+        <section className="grid place-content-center px-2 border mt-[70px] min-h-screen">
 
             {
                 token ? (
-                    <section className="bg-white rounded-xl p-4 w-[300px] grid gap-6">
+                    <section className="bg-white rounded-xl p-4 w-[300px] grid gap-6 border shadow-2xl">
                         <i className="bx bxs-user-circle text-center text-6xl "></i>
                         <span className="text-center font-bold">{user.firstName} {user.lastName}</span>
                         <button onClick={handleClickLogout} className="block w-full py-2 bg-[#F85555] text-white hover:bg-red-600 transition-color rounded-lg">logout</button>
                     </section>
                 ) : (
-                    <form onSubmit={handleSubmit(submit)} className="bg-white rounded-xl p-4 max-w-[350px] grid gap-6">
+                    <form onSubmit={handleSubmit(submit)} className="bg-white rounded-xl p-4 max-w-[350px] grid gap-6 border shadow-2xl">
                         <h3 className="font-medium text-xl text-center">Welcome! Enter your email and password to continue</h3>
 
                         <section className="bg-[#D8F5FD] py-2 px-4 rounded-md">

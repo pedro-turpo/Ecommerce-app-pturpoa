@@ -9,7 +9,7 @@ const Header = () => {
     const handleClickShowCart = () => dispatch(changeIsShowCart())
         
     return (
-        <header className="grid grid-cols-2 justify-between text-[20px] sm:border-b sm:border-secondary w-[100%] h-[70px] fixed pt-2 bg-white z-10 px-4 max-w-[1280px] mx-auto">
+        <header className="grid grid-cols-2 justify-between text-2xl sm:border-b sm:border-secondary w-[100%] h-[70px] fixed pt-2 bg-white z-10 px-4 max-w-[1280px] mx-auto">
             <Link className="text-primary font-bold grid items-center" to="/">E-commerce</Link>
 
             <nav className="text-secondary grid grid-cols-3 mx-2 p-2">

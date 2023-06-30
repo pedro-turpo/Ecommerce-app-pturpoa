@@ -71,16 +71,17 @@ const ProductDetail = () => {
   }, [product])
 
   return (
-    <section className="p-2 max-w-[1024px] mx-auto">
+    <section className="p-2 max-w-[1024px] mx-auto mt-[70px]">
 
-      <section className="flex text-xs gap-2 items-center">
-        <Link to='/'>Home</Link>
-        <div className="h-[6px] aspect-square rounded-full bg-red-500"></div>
-        <span className="font-bold truncate w-[200px]">{product?.title}</span>
+      {/* Text of the head Home and **** */}
+      <section className="flex text-xs gap-2 items-center mt-2 pl-2">
+        <Link className="text-base" to='/'>Home</Link>
+        <div className="h-[8px] aspect-square rounded-full bg-red-500"></div>
+        <span className="font-bold truncate w-[200px] text-base">{product?.title}</span>
       </section>
 
-      <section className="grid gap-6 sm:grid-cols-2 items-center">
-        {/* slider */}
+       {/* slider */}
+      <section className="grid gap-6 sm:grid-cols-2 items-center mt-4">
         <article className="overflow-hidden relative">
           <section className={`flex w-[300%] ${sliderStyles[imageToShow]} transition-all duration-300`}>
             <div className="h-[300px] w-[calc(100%_/_3)]">
@@ -102,15 +103,15 @@ const ProductDetail = () => {
         </article>
 
         {/* info */}
-        <article className="grid gap-6">
+        <article className="grid gap-6 text-xl pl-2">
           <div>
             <h4 className="text-gray-300 font-semibold">{product?.brand}</h4>
-            <span className="font-semibold text-lg ml-2">{product?.title}</span>
+            <span className="font-semibold ml-2 text-2xl">{product?.title}</span>
           </div>
 
           <section className="grid grid-cols-2">
             <article>
-              <h4>Price</h4>
+              <h4 className="text-gray-300 text-sm font-semibold">Price</h4>
               <span>$ {product?.price}</span>
             </article>
 
@@ -123,15 +124,15 @@ const ProductDetail = () => {
               </div>
             </article>
           </section>
-          <button onClick={handleClickAddProduct} className="block w-full py-2 bg-[#F85555] text-white hover:bg-red-600 transition-color">addToCard <i className="bx bx-cart"></i></button>
+          <button onClick={handleClickAddProduct} className="w-full py-2 bg-[#F85555] text-white hover:bg-red-600 transition-color flex justify-center items-center gap-1">addToCard <i className="bx bx-cart"></i></button>
 
-          <p className="text-xs">{product?.description}</p>
+          <p className="text-xs text-justify">{product?.description}</p>
 
         </article>
 
       </section>
-      <section>
-        <h3>Discover similar items</h3>
+      <section className="pl-2">
+        <h3 className="mt-8 text-xl font-semibold text-primary">Discover similar items</h3>
         <ListProducts products={similarProducts} />
       </section>
     </section>
